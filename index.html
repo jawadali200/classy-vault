@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classy Vault | Unlocking Timeless Style</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: { DEFAULT: '#D4AF37', light: '#F3E5AB', dark: '#AA820A' },
+                        darkbg: '#0a0a0c',
+                        cardbg: '#121216',
+                        cardborder: '#22222a'
+                    },
+                    fontFamily: {
+                        serif: ['Cinzel', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #0a0a0c; color: #e2e8f0; font-family: 'Plus Jakarta Sans', sans-serif; }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #FFF0B3 0%, #D4AF37 50%, #997A15 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* Animated Luxury Glow */
+        .hero-glow {
+            background: radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.15) 0%, rgba(10, 10, 12, 0.95) 70%);
+            animation: pulseGlow 6s ease-in-out infinite alternate;
+        }
+        @keyframes pulseGlow {
+            0% { transform: scale(1); opacity: 0.8; }
+            100% { transform: scale(1.05); opacity: 1; }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-gold selection:text-black">
+
+    <!-- ANNOUNCEMENT BAR -->
+    <div class="bg-black text-gold text-xs py-2 text-center font-medium border-b border-gold/20 flex justify-between px-4 z-20 relative">
+        <span><i class="fa-solid fa-truck-fast mr-2"></i>FREE SHIPPING ACROSS PAKISTAN</span>
+        <span class="hidden sm:inline"><i class="fa-solid fa-gem mr-2"></i>PREMIUM LUXURY COLLECTION</span>
+        <span><i class="fa-solid fa-mobile-screen-button mr-2"></i>EASYPAISA & JAZZCASH ACCEPTED</span>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="sticky top-0 z-50 bg-darkbg/90 backdrop-blur-md border-b border-cardborder">
+        <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
+            <a href="#home" class="flex items-center space-x-3">
+                <img src="logo.png" alt="Classy Vault Logo" class="w-10 h-10 rounded-full border border-gold/40 object-cover" onerror="this.style.display='none'">
+                <span class="font-serif text-2xl font-bold gold-gradient-text">CLASSY VAULT</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8 font-medium text-sm">
+                <a href="#home" class="text-gold">HOME</a>
+                <a href="#watches" class="text-gray-300 hover:text-gold">WATCHES</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button onclick="toggleCart()" class="relative text-gray-300 hover:text-gold flex items-center space-x-2 bg-cardbg px-3 py-1.5 rounded-lg border border-cardborder">
+                    <i class="fa-solid fa-bag-shopping text-gold"></i>
+                    <span class="text-xs font-bold">Cart</span>
+                    <span id="cartCount" class="bg-gold text-black text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION WITH LUXURY ANIMATED BG -->
+    <section id="home" class="relative py-28 max-w-7xl mx-auto px-4 text-center space-y-4 rounded-3xl my-6 overflow-hidden border border-gold/30 hero-glow">
+        
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 bg-[radial-gradient(#22222a_1px,transparent_1px)] [background-size:16px_16px] opacity-30"></div>
+
+        <!-- Hero Content -->
+        <div class="relative z-10 space-y-4">
+            <span class="text-gold text-xs uppercase tracking-widest font-semibold bg-black/60 px-4 py-1.5 rounded-full border border-gold/40 inline-block backdrop-blur-sm">Welcome To Classy Vault</span>
+            <h1 class="font-serif text-4xl sm:text-6xl font-extrabold text-white drop-shadow-lg">GET YOUR NEW EDITION WATCH</h1>
+            <p class="text-gray-300 max-w-xl mx-auto text-sm drop-shadow">Unlocking Timeless Elegance. Explore our exclusive luxury watch collection.</p>
+            <div class="pt-4">
+                <a href="#watches" class="bg-gold hover:bg-gold-dark text-black font-bold px-8 py-3.5 rounded-xl text-sm uppercase inline-block shadow-lg shadow-gold/20 hover:scale-105 transition transform">SHOP NOW</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WATCHES SECTION -->
+    <section id="watches" class="py-12 max-w-7xl mx-auto px-4">
+        <div class="text-center mb-8">
+            <h2 class="font-serif text-3xl font-bold text-white">WATCHES COLLECTION</h2>
+            <div class="w-16 h-0.5 bg-gold mx-auto mt-2"></div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <!-- Watch 1 -->
+            <div class="bg-cardbg rounded-xl border border-cardborder p-4 space-y-3 group">
+                <img src="watch1.jpg" alt="Rolex Silver" class="w-full h-64 object-cover rounded-lg cursor-pointer group-hover:scale-105 transition duration-300" onclick="openDetails('Rolex Datejust Silver Dial', 3500, 'watch1.jpg', 'Classic silver dial luxury watch with stainless steel strap. Water resistant and scratch proof glass.', 'High-grade stainless steel', 'Japanese Quartz')">
+                <h3 class="font-serif font-bold text-white cursor-pointer hover:text-gold" onclick="openDetails('Rolex Datejust Silver Dial', 3500, 'watch1.jpg', 'Classic silver dial luxury watch with stainless steel strap. Water resistant and scratch proof glass.', 'High-grade stainless steel', 'Japanese Quartz')">Rolex Datejust Silver Dial</h3>
+                <p class="text-gold font-bold">Rs. 3,500</p>
+                <div class="flex gap-2 pt-2">
+                    <button onclick="openDetails('Rolex Datejust Silver Dial', 3500, 'watch1.jpg', 'Classic silver dial luxury watch with stainless steel strap. Water resistant and scratch proof glass.', 'High-grade stainless steel', 'Japanese Quartz')" class="w-1/2 bg-cardborder hover:bg-cardborder/70 text-gray-300 font-bold py-2 rounded text-xs">DETAILS</button>
+                    <button onclick="addToCart('Rolex Datejust Silver Dial', 3500)" class="w-1/2 bg-gold hover:bg-gold-dark text-black font-bold py-2 rounded text-xs">ADD TO CART</button>
+                </div>
+            </div>
+
+            <!-- Watch 2 -->
+            <div class="bg-cardbg rounded-xl border border-cardborder p-4 space-y-3 group">
+                <img src="watch2.jpg" alt="Rolex Red" class="w-full h-64 object-cover rounded-lg cursor-pointer group-hover:scale-105 transition duration-300" onclick="openDetails('Rolex Datejust Red Sunburst', 3500, 'watch2.jpg', 'Stunning red sunburst dial watch designed for formal and casual wear.', 'Stainless Steel & Rose Gold finish', 'Automatic Movement')">
+                <h3 class="font-serif font-bold text-white cursor-pointer hover:text-gold" onclick="openDetails('Rolex Datejust Red Sunburst', 3500, 'watch2.jpg', 'Stunning red sunburst dial watch designed for formal and casual wear.', 'Stainless Steel & Rose Gold finish', 'Automatic Movement')">Rolex Datejust Red Sunburst</h3>
+                <p class="text-gold font-bold">Rs. 3,500</p>
+                <div class="flex gap-2 pt-2">
+                    <button onclick="openDetails('Rolex Datejust Red Sunburst', 3500, 'watch2.jpg', 'Stunning red sunburst dial watch designed for formal and casual wear.', 'Stainless Steel & Rose Gold finish', 'Automatic Movement')" class="w-1/2 bg-cardborder hover:bg-cardborder/70 text-gray-300 font-bold py-2 rounded text-xs">DETAILS</button>
+                    <button onclick="addToCart('Rolex Datejust Red Sunburst', 3500)" class="w-1/2 bg-gold hover:bg-gold-dark text-black font-bold py-2 rounded text-xs">ADD TO CART</button>
+                </div>
+            </div>
+
+            <!-- Watch 3 -->
+            <div class="bg-cardbg rounded-xl border border-cardborder p-4 space-y-3 group">
+                <img src="watch3.jpg" alt="Rolex Green" class="w-full h-64 object-cover rounded-lg cursor-pointer group-hover:scale-105 transition duration-300" onclick="openDetails('Rolex Datejust Emerald Green', 3500, 'watch3.jpg', 'Signature emerald green dial with date display and luminous hands.', 'Solid Steel', 'Quartz Movement')">
+                <h3 class="font-serif font-bold text-white cursor-pointer hover:text-gold" onclick="openDetails('Rolex Datejust Emerald Green', 3500, 'watch3.jpg', 'Signature emerald green dial with date display and luminous hands.', 'Solid Steel', 'Quartz Movement')">Rolex Datejust Emerald Green</h3>
+                <p class="text-gold font-bold">Rs. 3,500</p>
+                <div class="flex gap-2 pt-2">
+                    <button onclick="openDetails('Rolex Datejust Emerald Green', 3500, 'watch3.jpg', 'Signature emerald green dial with date display and luminous hands.', 'Solid Steel', 'Quartz Movement')" class="w-1/2 bg-cardborder hover:bg-cardborder/70 text-gray-300 font-bold py-2 rounded text-xs">DETAILS</button>
+                    <button onclick="addToCart('Rolex Datejust Emerald Green', 3500)" class="w-1/2 bg-gold hover:bg-gold-dark text-black font-bold py-2 rounded text-xs">ADD TO CART</button>
+                </div>
+            </div>
+
+            <!-- Watch 4 -->
+            <div class="bg-cardbg rounded-xl border border-cardborder p-4 space-y-3 group">
+                <img src="watch4.jpg" alt="Roulette Watch" class="w-full h-64 object-cover rounded-lg cursor-pointer group-hover:scale-105 transition duration-300" onclick="openDetails('Casino Roulette Wheel Edition', 3500, 'watch4.jpg', 'Unique and stylish casino roulette wheel special edition timepiece for watch lovers.', 'Premium Alloy', 'Precision Quartz')">
+                <h3 class="font-serif font-bold text-white cursor-pointer hover:text-gold" onclick="openDetails('Casino Roulette Wheel Edition', 3500, 'watch4.jpg', 'Unique and stylish casino roulette wheel special edition timepiece for watch lovers.', 'Premium Alloy', 'Precision Quartz')">Casino Roulette Wheel Edition</h3>
+                <p class="text-gold font-bold">Rs. 3,500</p>
+                <div class="flex gap-2 pt-2">
+                    <button onclick="openDetails('Casino Roulette Wheel Edition', 3500, 'watch4.jpg', 'Unique and stylish casino roulette wheel special edition timepiece for watch lovers.', 'Premium Alloy', 'Precision Quartz')" class="w-1/2 bg-cardborder hover:bg-cardborder/70 text-gray-300 font-bold py-2 rounded text-xs">DETAILS</button>
+                    <button onclick="addToCart('Casino Roulette Wheel Edition', 3500)" class="w-1/2 bg-gold hover:bg-gold-dark text-black font-bold py-2 rounded text-xs">ADD TO CART</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black py-8 border-t border-cardborder text-center text-xs text-gray-500">
+        <p>&copy; 2026 Classy Vault. All rights reserved.</p>
+        <p class="text-gold mt-1">Payment Accepted: EasyPaisa / JazzCash | WhatsApp Support: 03301954438</p>
+    </footer>
+
+    <!-- PRODUCT DETAILS MODAL -->
+    <div id="detailsModal" class="fixed inset-0 bg-black/80 hidden z-50 flex items-center justify-center p-4">
+        <div class="bg-cardbg border border-gold/30 rounded-2xl max-w-2xl w-full p-6 relative space-y-4 max-h-[90vh] overflow-y-auto">
+            <button onclick="closeDetails()" class="absolute top-4 right-4 text-gray-400 hover:text-white text-xl">✕</button>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+                <img id="modalImg" src="" alt="Product" class="w-full h-80 object-cover rounded-xl border border-cardborder">
+                <div class="space-y-3">
+                    <span class="bg-gold/20 text-gold text-xs font-bold px-3 py-1 rounded-full uppercase">Luxury Edition</span>
+                    <h2 id="modalTitle" class="font-serif text-2xl font-bold text-white"></h2>
+                    <p id="modalPrice" class="text-gold text-xl font-bold"></p>
+                    <p id="modalDesc" class="text-gray-300 text-xs leading-relaxed"></p>
+                    <div class="border-t border-cardborder pt-3 space-y-1 text-xs text-gray-400">
+                        <p><strong>Material:</strong> <span id="modalMaterial"></span></p>
+                        <p><strong>Movement:</strong> <span id="modalMovement"></span></p>
+                        <p><i class="fa-solid fa-truck text-gold mr-1"></i> Free Shipping across Pakistan</p>
+                        <p><i class="fa-solid fa-credit-card text-gold mr-1"></i> Payment: EasyPaisa / JazzCash</p>
+                    </div>
+                    <button id="modalAddBtn" class="w-full bg-gold hover:bg-gold-dark text-black font-bold py-3 rounded-lg text-xs uppercase mt-2">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CART MODAL WITH PAYMENT INFO -->
+    <div id="cartModal" class="fixed inset-0 bg-black/80 hidden z-50 flex justify-end">
+        <div class="w-full max-w-md bg-cardbg h-full p-6 flex flex-col justify-between overflow-y-auto">
+            <div class="space-y-6">
+                <div class="flex justify-between items-center pb-4 border-b border-cardborder">
+                    <h3 class="font-serif font-bold text-white text-lg">Checkout Vault</h3>
+                    <button onclick="toggleCart()" class="text-gray-400 hover:text-white">✕</button>
+                </div>
+                <div>
+                    <h4 class="text-xs font-bold text-gold uppercase tracking-wider mb-2">Selected Products</h4>
+                    <div id="cartItems" class="space-y-2 text-xs text-gray-300">Cart is empty</div>
+                </div>
+                
+                <!-- PAYMENT INSTRUCTIONS BOX -->
+                <div class="bg-black/60 border border-gold/30 rounded-lg p-3 text-xs space-y-1">
+                    <p class="text-gold font-bold"><i class="fa-solid fa-wallet mr-1"></i> Payment Method:</p>
+                    <p class="text-gray-300">Advance Payment via <strong>EasyPaisa</strong> or <strong>JazzCash</strong>.</p>
+                    <p class="text-gray-400 text-[11px]">Account details will be sent on WhatsApp upon order confirmation.</p>
+                </div>
+
+                <div class="space-y-3 pt-2 border-t border-cardborder">
+                    <h4 class="text-xs font-bold text-gold uppercase tracking-wider">Delivery Details</h4>
+                    <input type="text" id="custName" placeholder="Full Name" class="w-full bg-black border border-cardborder rounded px-3 py-2 text-xs text-white">
+                    <input type="tel" id="custPhone" placeholder="Phone Number" class="w-full bg-black border border-cardborder rounded px-3 py-2 text-xs text-white">
+                    <input type="text" id="custCity" placeholder="City" class="w-full bg-black border border-cardborder rounded px-3 py-2 text-xs text-white">
+                    <textarea id="custAddress" rows="2" placeholder="Delivery Address" class="w-full bg-black border border-cardborder rounded px-3 py-2 text-xs text-white"></textarea>
+                </div>
+            </div>
+            <div class="border-t border-cardborder pt-4 space-y-3 mt-4">
+                <div class="flex justify-between font-bold text-gold">
+                    <span>Total Amount:</span>
+                    <span id="cartTotal">Rs. 0</span>
+                </div>
+                <button onclick="checkoutWhatsApp()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 rounded-lg text-xs uppercase">Pay via EasyPaisa / JazzCash</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let cart = [];
+
+        function toggleCart() { 
+            document.getElementById('cartModal').classList.toggle('hidden'); 
+        }
+
+        function openDetails(title, price, img, desc, material, movement) {
+            document.getElementById('modalTitle').textContent = title;
+            document.getElementById('modalPrice').textContent = 'Rs. ' + price.toLocaleString();
+            document.getElementById('modalImg').src = img;
+            document.getElementById('modalDesc').textContent = desc;
+            document.getElementById('modalMaterial').textContent = material;
+            document.getElementById('modalMovement').textContent = movement;
+            
+            document.getElementById('modalAddBtn').onclick = function() {
+                addToCart(title, price);
+                closeDetails();
+            };
+            
+            document.getElementById('detailsModal').classList.remove('hidden');
+        }
+
+        function closeDetails() {
+            document.getElementById('detailsModal').classList.add('hidden');
+        }
+
+        function addToCart(title, price) {
+            cart.push({ title, price });
+            updateCart();
+            toggleCart();
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCart();
+        }
+
+        function updateCart() {
+            document.getElementById('cartCount').textContent = cart.length;
+            let total = cart.reduce((sum, item) => sum + item.price, 0);
+            document.getElementById('cartTotal').textContent = 'Rs. ' + total.toLocaleString();
+            
+            if (cart.length === 0) {
+                document.getElementById('cartItems').innerHTML = '<p class="text-gray-500">Cart is empty</p>';
+            } else {
+                document.getElementById('cartItems').innerHTML = cart.map((i, index) => `
+                    <div class="flex justify-between items-center border-b border-cardborder py-2">
+                        <div>
+                            <p class="font-bold text-white">${i.title}</p>
+                            <span class="text-gold">Rs. ${i.price.toLocaleString()}</span>
+                        </div>
+                        <button onclick="removeFromCart(${index})" class="text-red-400 hover:text-red-600 bg-red-500/10 px-2 py-1 rounded text-[10px] font-bold">CANCEL</button>
+                    </div>
+                `).join('');
+            }
+        }
+
+        function checkoutWhatsApp() {
+            if (cart.length === 0) return alert('Cart empty!');
+            const name = document.getElementById('custName').value;
+            const phone = document.getElementById('custPhone').value;
+            const city = document.getElementById('custCity').value;
+            const address = document.getElementById('custAddress').value;
+            if(!name || !phone || !city || !address) return alert('Tamam details fill karein!');
+            
+            let total = cart.reduce((sum, item) => sum + item.price, 0);
+            let msg = `New Order Request (Payment via EasyPaisa/JazzCash):\n\nCustomer Name: ${name}\nPhone: ${phone}\nCity: ${city}\nAddress: ${address}\n\nOrdered Items:\n` + cart.map(i => `- ${i.title} (Rs. ${i.price.toLocaleString()})`).join('\n') + `\n\nTotal Amount: Rs. ${total.toLocaleString()}\n\nPlease send EasyPaisa/JazzCash account details for payment.`;
+            window.open(`https://wa.me/923301954438?text=${encodeURIComponent(msg)}`);
+        }
+    </script>
+</body>
+</html>
